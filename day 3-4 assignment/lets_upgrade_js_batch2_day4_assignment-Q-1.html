@@ -1,0 +1,55 @@
+ <!-- Q1.Create a webpage containing an image and three button
+    (a)On click of the second button a change in the existing imageto a new image
+    (b)On click of the third button change it once again
+    (c)On click of the first, the first image should come back-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lets_upgrade_js_batch2_day4_assignment-Q1.js"></script>
+    <style>
+        h1 {
+            background-color: aqua;
+            color: red;
+            border-radius: 20px;
+        }
+
+        #FirstImage,
+        #secondimage,
+        #thirdimage {
+            color: blueviolet;
+        }
+        button{
+            background-color:seashell;
+            color:blueviolet;
+            border-radius: 10px;
+        }
+        img{
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <center>
+        <h1>lets upgrade js batch-2 day-4 assignment</h1>
+
+        <div class="container" id="container1">
+
+            <img src="https://miro.medium.com/max/2400/1*OH0dDfJAGv6aEGFk2zLAxw.jpeg" width="100%" id="SecondImage">
+            <br />
+            <br />
+            <button onclick="firstImage()">first Image</button>
+            <button onclick="SecondImage()">Next Image</button>
+            <button onclick="thirdImage()">Next Image</button>
+
+        </div>
+    </center>
+</body>
+
+</html>

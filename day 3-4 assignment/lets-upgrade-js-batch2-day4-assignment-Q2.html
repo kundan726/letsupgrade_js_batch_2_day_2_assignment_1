@@ -1,0 +1,48 @@
+<!-- Q2. Create a webpage containing two input fields and a button
+        (a).Write something in the first input
+        (b).On click of the button,the content of the input one should be copied in the second input
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+                body{
+                        background-color: blueviolet;
+                }
+                input{
+                        background-color:rgb(239, 243, 26);
+                        border-radius: 5px;
+                }
+                button{
+                        background-color: rgb(239, 243, 26);
+                        border-radius: 5px;
+                }
+        </style>
+        <script>
+                function copy() {
+                        let copy = document.getElementById("n1");
+                        let copy2 = document.getElementById("n2");
+                        n2.value = n1.value
+                }
+        </script>
+</head>
+
+<body>
+        <center>
+                <h1><u>Letsupgrade js batch-2 day-4 assignment</u></h1>
+        </center>
+        <div>
+                <input type="text" placeholder="Enter Your Text Here" id="n1">
+                <br />
+                <br />
+                <input type="text" placeholder="copied text" id="n2">
+                <button onclick="copy()">Click to Copy From 1st input area</button>
+        </div>
+</body>
+
+</html>
