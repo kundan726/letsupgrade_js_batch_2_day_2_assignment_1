@@ -1,0 +1,116 @@
+<!-- Q1. Create an array containing five objects with properties{names,age,city,salary}
+        (A) Display all the objects in a table
+        (B)Create a search functionality for name and city
+        (C)Delete button to delete records
+        (D)Data is not permanent -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: royalblue;
+        }
+        .container{
+            font-family: sans-serif;
+            width: 100%;
+            height: 100vh;
+        }
+        .index{
+            background-color: yellow;
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 10vh;
+            display: inline-block;
+            border-radius: 10px;
+        }
+        h1{
+            padding: 10px;
+            text-align: center;
+        }
+        table{
+            width: 90%;
+            margin-top: 10px;
+            border-radius: 5px;
+            margin-left: 5%;
+            margin-bottom: 5%;
+        }
+        th,td{
+            margin-left: 10%;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        form{
+            margin-left: 5%;
+        }
+        input{
+            width: 200px;
+            height: 40px;
+            text-indent: 30px;
+            border-radius: 5px;
+        }
+        button{
+            margin-left: 40px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .search{
+            margin-left: 5%;
+        }
+        .sname{
+            width: 30%;
+            margin-right: 20px;
+        }
+        .scity{
+            width: 30%;
+            margin-left: 327px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <!-- <h1><center><br />Learners</center></h1> -->
+        <div class="index" id="index">
+            <h1><u>Computer Nerds</u></h1>
+            <form>
+                <input type="text" placeholder="Name" class="name" id="name">
+                <input type="number" placeholder="Age" class="age" id="age">
+                <input type="text" placeholder="City" class="city" id="city">
+                <input type="number" placeholder="Salary" class="salary" id="salary">
+                <button onclick="addnerd(event)">Add New Nerd</button>
+            </form>
+            <br />
+            <form class="search" id="search">
+                <input type="text" placeholder="Search by name" id="sname" class="sname" onkeyup="searchbyname()">
+                <input type="text" placeholder="Search by city" id="scity" class="scity" onkeyup="searchbycity()">
+            </form>
+           <table border="1" cellspacing=0 class="table" >
+               <thead>
+                    <tr>
+                        <th>S No</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>City</th>
+                        <th>Salary</th>
+                        <th>Action</th>
+                    </tr>
+               </thead>
+               <tbody class="tdata" id="tdata">
+                   
+               </tbody>
+           </table> 
+        </div>
+    </div>
+    <script src="day5-6-assignment-Q1.js"></script>
+</body>
+</html>
