@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wardrobe.com</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body{
+          background-color: black;
+      }
+
+      .header {
+        height: 70px;
+        width: 100%;
+        background-color: lightgrey;
+        line-height: 70px;
+      }
+
+      h1 {
+        margin-left: 5%;
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+      }
+
+      .search {
+        height: 70px;
+        width: 60%;
+        /* background-color: red; */
+        display: inline-block;
+      }
+      .search input:hover{
+        background-color: yellow;
+      }
+
+      .search input {
+        height: 40px;
+        width: 100%;
+        text-indent: 20px;
+        border-radius: 5px;
+        border: 1px solid gray;
+        outline: none;
+      }
+
+      .products {
+        width: 100%;
+        height: auto;
+        /* background-color: gray; */
+      }
+
+      .productwrapper {
+        height: auto;
+        width: 80%;
+        /* background-color: green; */
+        margin-left: 10%;
+        margin-bottom: 50px;
+      }
+
+      .product {
+        height: auto;
+        width: 25%;
+        background-color: lightgrey;
+        display: inline-block;
+        margin-top: 25px;
+        margin-left: 6.25%;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        /* border-style: none; */
+      }
+
+      .prodimg {
+        height: 300px;
+        width: 100%;
+        /* background-color: yellow; */
+        overflow: hidden;
+      }
+      .noofobject{
+          padding: 10px;
+          margin-top: 15px;
+          margin-left: 81%; 
+          border-radius: 5px; 
+          position: relative;
+          text-align: center;
+      }
+      .filter{
+        padding:10px;
+        margin-left: 15px;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      .product h3,
+      .product p {
+        padding: 5px;
+        padding-left: 10px;
+      }
+
+      .product p {
+        color: gray;
+      }
+      button {
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .filter:hover{
+        background-color: yellow;
+      }
+      .filterbtn{
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .filterbtn:hover{
+        background-color: yellow;
+      } 
+      .carth{
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Wardrobe.com</h1>
+      <div class="search">
+        <input
+          type="search"
+          onkeyup="searchProduct(this.value)"
+          placeholder="Search For Products"
+        />
+      </div>
+    </div>
+    <div>
+      <input type="text" placeholder="No of items in the Cart"  id="count" class="noofobject"><br />
+      <input type="text" placeholder="Min. Price"  id="minfilter" class="filter" >
+      <input type="text" placeholder="Max. Price filter"  id="maxfilter" class="filter">
+      <button onclick="filter()" class="filterbtn">Filter</button>
+    </div>
+    <div class="products">
+      <div class="productwrapper" id="productwrapper"></div>
+    </div>
+
+    <div class="products">
+      <h1 class="carth"><u>Cart</u></h1>
+      <div class="productwrapper" id="cart"></div>
+    </div>
+
+    <!-- <div><input type="number" placeholder="no of items in cart"  id="noofobject" class="noofobject"></div> -->
+
+    <script src="day8.js"></script>
+  </body>
+</html>
